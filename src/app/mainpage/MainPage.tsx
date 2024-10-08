@@ -34,7 +34,7 @@ const CodeSnippet = ({ url }: { url: StaticImageData }) => {
     const [urlData, setUrlData] = useState("")
 
     const copyHandle = () => {
-        const imageUrl = "http://localhost:3000" + imgRef?.current?.["srcset"]?.split(",")[0];
+        const imageUrl = imgRef?.current?.["src"] + "";
         navigator.clipboard.writeText(imageUrl)
         setUrlData(imageUrl)
         console.log(urlData)
