@@ -1,5 +1,5 @@
 "use client"
-import { FaCode, FaCopy, FaLink } from "react-icons/fa";
+import { FaCopy, FaLink } from "react-icons/fa";
 
 import moon from '../assets/images/exist_real.gif';
 import real from '../assets/images/exist_real.gif';
@@ -30,11 +30,11 @@ export const MainPage = () => {
 
 const CodeSnippet = ({ url }: { url: StaticImageData }) => {
 
-    const imgRef = useRef(null)
+    const imgRef = useRef<HTMLImageElement | null>(null)
     const [urlData, setUrlData] = useState("")
 
     const copyHandle = () => {
-        const imageUrl = "http://localhost:3000" + imgRef?.current?.srcset.split(",")[0];
+        const imageUrl = "http://localhost:3000" + imgRef?.current?.["srcset"]?.split(",")[0];
         navigator.clipboard.writeText(imageUrl)
         setUrlData(imageUrl)
         console.log(urlData)

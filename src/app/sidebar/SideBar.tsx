@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import { BsCassette } from "react-icons/bs"
 import { FaFire, FaSun } from "react-icons/fa"
 import { FaPhp } from "react-icons/fa6"
@@ -15,7 +16,7 @@ export const SideBar = () => {
     )
 }
 
-const SideIcon = ({ icon, text = "tooltip 💡" }: any) => {
+const SideIcon = ({ icon, text = "tooltip 💡" }: { icon: ReactNode, text?: string }) => {
     return <div className="sidebar-icon group">
         {icon}
         <span className="sidebar-tooltip group-hover:scale-100">
