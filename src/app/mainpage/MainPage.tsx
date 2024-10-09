@@ -32,8 +32,8 @@ export const MainPage = () => {
                         imgData.map((url) => (<CodeSnippet url={url.url} key={url.id} />))
                     }
                 </div>
-                <h1>Link for Image</h1>
-                {/* <div>
+                {/*<h1>Link for Image</h1>
+                <div>
                     {
                         data.map((url) => (<CodeSnippet url={url.url} key={url.id} />))
                     }
@@ -72,6 +72,7 @@ const CodeSnippet = ({ url }: { url: StaticImageData }) => {
                     onLoad={(e) => {
                         setUrlData(e.currentTarget.src)
                     }}
+                    unoptimized
                 />
                 <p className="text-wrap text-slate-400 bg-green-50 m-1 py-2 px-1">
                     {
